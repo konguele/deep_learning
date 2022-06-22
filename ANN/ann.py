@@ -67,3 +67,13 @@ from keras.layers import Dense
 
 # Inicializar la RNA
 classifier = Sequential()
+
+# Añadir las capas de entrada y primera capa oculta
+classifier.add(Dense(units=6, kernel_initializer="uniform", activation = "relu", input_dim = 11))
+
+# Parte 3 - Evaluar el modelo y calcular predicciones finales
+
+# Predicción de los resultados con el Conjunto de Testing
+y_pred = classifier.predict(X_test)
+
+# Elaborar una matriz de confusión
